@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        {% include 'app/nav.html' %}
+        <h1>Chats</h1>
+        {% if chat_list %}
+            <ul>
+            {% for chat in chat_list %}
+                <div>
+                    <a class="btn" container href="/api/{{ chat.id }}/">{{ chat.chat_name }}</a>
+                </div>
+            {% endfor %}
+            </div>
+        {% else %}
+            <p>No hay chats disponibles</p>
+        {% endif %}
+    </body>
+</html>

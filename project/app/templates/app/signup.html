@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Signup</title>
+    </head>
+    <body>
+        <div class="container">
+            <input class="inputs" id="usernameinput" type="text" placeholder="Username"><br>
+            <input class="inputs" id="emailinput" type="text", placeholder="Email"><br>
+            <input class="inputs" id="passwordinput1" type="text" placeholder="Password"><br>
+            <input class="inputs" id="passwordinput2" type="text" placeholder="Password"><br>
+            <button class="btn" id="submit">signup</button>
+            <script src="{% static 'signup.js' %}"></script>
+        </div>
+    </body>
+</html>

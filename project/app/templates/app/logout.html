@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Logout</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Logout</h1>
+        </div>
+        <div class="container">
+            <p>Estas seguro que quieres salir?</p>
+            <button class="btn" id="yes">si</button>
+            <button class="btn" id="no">no</button>
+        </div>
+        <script src="{% static 'logout.js' %}"></script>
+    </body>
+</html>
