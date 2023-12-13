@@ -47,3 +47,12 @@ class MessageApiView(APIView):
         messages = Message.objects.all()
         message_serializer = MessageSerializer(messages, many=True)
         return Response(data=message_serializer.data, status=status.HTTP_200_OK)
+
+class NewChatView(APIView):
+    def get(self, request):
+        return render(request=request, template_name='app/newchat.html')
+    
+    def post(self, request):
+        chat_name = request.data['chat_name']
+        Chat.objects.create(chat_name=chat_name)
+        return Response(data=request.data, status=status.HTTP_201_CREATED)

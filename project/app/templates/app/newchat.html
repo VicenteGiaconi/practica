@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </head>
+    <body>
+        <div class="container">
+            <input class="inputs" id="chatnameinput" type="text", placeholder="Chatname"><br>
+            <button class="btn" id="confirm">confirmar</button><br>
+            <button class="btn" id="cancel" >cancelar</button>
+        </div>
+        
+        <script src="{% static 'newchat.js' %}"></script>
+    </body>
+</html>

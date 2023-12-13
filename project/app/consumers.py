@@ -42,7 +42,6 @@ class ChatConsumer(WebsocketConsumer):
             self.room_group_name, {"type": "chat.message",
                                    "message": message,
                                    'user_token': text_data_json['user_token'],
-                                   'username': user.username,
                                    }
         )
 

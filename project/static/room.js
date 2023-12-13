@@ -23,11 +23,7 @@ chatSocket.onmessage = function(e) {
     const messageElement = document.createElement('div')
     const userToken = data['user_token']
     const loggedInUserToken = localStorage['access_token'];
-    messageElement.innerText = data.username
-    messageElement.innerText.add('\n')
-    messageElement.innerText.add(data.message)
-    /*console.log(messageElement.innerText)
-    console.log(userToken,loggedInUserToken)*/
+    messageElement.innerText = data.message
 
     if (userToken===loggedInUserToken) {
         messageElement.classList.add('message', 'sender')

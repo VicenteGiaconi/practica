@@ -7,6 +7,7 @@
     </head>
     <body>
         {% include 'app/nav.html' %}
+        <button id="newchat" class="nav">Nuevo chat</button>
         <h1>Chats</h1>
         {% if chat_list %}
             <ul>
@@ -19,5 +20,6 @@
         {% else %}
             <p>No hay chats disponibles</p>
         {% endif %}
+        <script src="{% static 'index.js' %}"></script>
     </body>
 </html>
